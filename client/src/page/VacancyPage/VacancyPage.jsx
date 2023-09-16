@@ -25,9 +25,23 @@ function VacancyPage() {
                     <div className={style.img}></div>
                     <p>{data.city}</p>
                 </div>
+            </div>
+            <div className={style.description}>
+                <div className={style.responsibilities}>
+                    <h2>Обязанности:</h2>
+                    <p>{data.responsibilities}</p>
+                </div>
+                <div className={style.requirements}>
+                    <h2>Требования:</h2>
+                    <p>{data.requirements}</p>
+                </div>
+                <div className={style.conditions}>
+                    <h2>Условия:</h2>
+                    <p>{data.conditions}</p>
+                </div>
+
 
             </div>
-
 
 
         </div>

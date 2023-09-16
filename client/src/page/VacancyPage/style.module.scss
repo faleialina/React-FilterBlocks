@@ -58,3 +58,16 @@
         }
     }
 }
+
+.description{
+    margin: auto;
+    width: 773px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--Grey-200, #EAEBED);
+    background: #FFF;
+    padding: 40px;
+    margin-top: 20px;
+}
