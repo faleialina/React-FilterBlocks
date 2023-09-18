@@ -70,4 +70,18 @@
     background: #FFF;
     padding: 40px;
     margin-top: 20px;
+
+    .responsibilities h2,
+    .requirements h2,
+    .conditions h2 {
+        color: var(--Black, #232134);
+        font: 700 20px Inter;          
+    }
+
+    .responsibilities p,
+    .requirements p,
+    .conditions p {
+        color: var(--Black, #232134);           
+        font: 400 16px Inter;            
+    }
 }
