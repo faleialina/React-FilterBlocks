@@ -7,7 +7,7 @@ import style from './style.module.scss'
 function VacancyPage() {
     const { id } = useParams()
     const [data, setData] = useState({})
-   
+
 
     useEffect(() => {
         const result = array.filter(elem => elem.id == id)
@@ -15,9 +15,7 @@ function VacancyPage() {
         setData(result[0])
     }, [])
 
-    function listItems() {
-        data[responsibilities].map(elem => <div>{elem}</div>)
-    }
+
     return (
         <div>
             <div className={style.vacancy}>
@@ -34,15 +32,21 @@ function VacancyPage() {
             <div className={style.description}>
                 <div className={style.responsibilities}>
                     <h2>Обязанности:</h2>
-                    <div>{listItems}</div>
+                   <ul> {
+                        data.responsibilities?.map(elem => <p>{elem}</p>)
+                    }</ul>
                 </div>
                 <div className={style.requirements}>
                     <h2>Требования:</h2>
-                    <p>{data.requirements}</p>
+                    <ul>{
+                        data.requirements?.map(elem => <p>{elem}</p>)
+                    }</ul>
                 </div>
                 <div className={style.conditions}>
                     <h2>Условия:</h2>
-                    <p>{data.conditions}</p>
+                    <ul> {
+                        data.conditions?.map(elem => <p>{elem}</p>)
+                    }</ul>
                 </div>
 
 
