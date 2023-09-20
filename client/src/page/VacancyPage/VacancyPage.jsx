@@ -33,19 +33,19 @@ function VacancyPage() {
                 <div className={style.responsibilities}>
                     <h2>Обязанности:</h2>
                    <ul> {
-                        data.responsibilities?.map(elem => <p>{elem}</p>)
+                        data.responsibilities?.map(elem => <li>{elem}</li>)
                     }</ul>
                 </div>
                 <div className={style.requirements}>
                     <h2>Требования:</h2>
                     <ul>{
-                        data.requirements?.map(elem => <p>{elem}</p>)
+                        data.requirements?.map(elem => <li>{elem}</li>)
                     }</ul>
                 </div>
                 <div className={style.conditions}>
                     <h2>Условия:</h2>
                     <ul> {
-                        data.conditions?.map(elem => <p>{elem}</p>)
+                        data.conditions?.map(elem => <li>{elem}</li>)
                     }</ul>
                 </div>
 
