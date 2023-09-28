@@ -1,30 +1,41 @@
 import { Input } from '@mantine/core';
-import { IconSearch } from '@tabler/icons-react';
+import { PasswordInput } from '@mantine/core';
+import { List } from '@mantine/core';
+import { Button } from '@mantine/core';
 import { Link } from 'react-router-dom';
+
 import style from './style.module.scss'
-import array from '../../Storage/Storage.json'
+
 
 
 function HomePage() {
-    
-    const result = array.map(elem => <Link to={`/vacancy/${elem.id}`}><div className={style.item}>
-        <h2>{elem.header}</h2>
-        <div className={style.flex}>
-            <p>{elem.salary}</p>
-            <p>{elem.workday}</p>
-        </div>
-        <div className={style.flex}>
-            <div className={style.img}></div>
-            <p>{elem.city}</p>
-        </div>
-    </div></Link>)
+
 
     return (
-        <div>
+        <div className={style.wrapper}>
+            <h1>Sign in</h1>
+            <h2>Email Address</h2>
+            <Input variant="filled" radius="md" placeholder="Email Address" />
+            <h2>Password</h2>
+            <PasswordInput variant="filled" radius="md" placeholder="Password" />
+            <List withPadding>
+                <List.Item>Must be at least 8 characters</List.Item>
+                <List.Item>Must contain at least 1 number</List.Item>
+                <List.Item>Must contain lover case and capital letters</List.Item>
+            </List>
+            <Button fullWidth
+                variant="gradient"
+                gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+            >
+                Create Account
+            </Button>
+            <div className={style.flex}>
+                <p>Have an account?</p>
+                <Link to={'/shopy'}><Button variant="subtle">Sign in</Button></Link>
+            </div>
 
-            <Input icon={<IconSearch />} placeholder="Введите название вакансии Поиск"
-            />
-            <div>{result}</div>
+
+
         </div>
 
 
